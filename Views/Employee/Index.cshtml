@@ -7,7 +7,7 @@
 <h3>EmployeeDB</h3>
 
 <div class="text-right">
-    <a asp-action="Create" class="btn btn-primary">Add Employee</a><hr />
+    <a asp-action="Create" class="btn btn-primary"> <i class="fas fa-plus-circle"></i> &nbsp; Add Employee</a><hr />
 </div>
    
 <table class="table table-bordered table-striped" style="width:100%">
@@ -45,9 +45,11 @@
             <td>
                 @Html.DisplayFor(modelItem => item.TelePhone)
             </td>
-            <td class="col-2">
-                <a asp-action="Edit" asp-route-id="@item.EmployeeId" class="btn btn-primary mx-2">Edit</a> 
-                <a asp-action="Delete" asp-route-id="@item.EmployeeId" class="btn btn-danger">Delete</a>
+            <td class="col-3">
+                <a asp-action="Edit" asp-route-id="@item.EmployeeId" class="btn btn-primary mx-2">
+                    <i class="far fa-edit"></i> &nbsp; Edit</a> 
+                <a asp-action="Delete" asp-route-id="@item.EmployeeId" class="btn btn-danger">
+                    <i class="far fa-trash-alt"></i> &nbsp; Delete</a>
             </td>
         </tr>
 }
