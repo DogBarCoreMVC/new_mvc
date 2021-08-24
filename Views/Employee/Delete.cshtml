@@ -1,0 +1,37 @@
+﻿@model new_mvc.Models.Employee
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h3>Delete</h3>
+
+<div>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <div>
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" disabled class="form-control" />
+            </div>
+            <div>
+                <label asp-for="Position" class="control-label"></label>
+                <input asp-for="Position" disabled class="form-control" />
+            </div>
+            <div>
+                <label asp-for="Mail" class="control-label"></label>
+                <input asp-for="Mail" disabled class="form-control" />
+            </div>
+            <div>
+                <label asp-for="TelePhone" class="control-label"></label>
+                <input asp-for="TelePhone" disabled class="form-control" />
+            </div>
+        </div>
+    </div><hr />
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="EmployeeId" />
+        <input type="submit" value="Delete" class="btn btn-danger mx-2" />
+        <a asp-action="Index" class="btn btn-success">Back</a>
+    </form>
+</div>
