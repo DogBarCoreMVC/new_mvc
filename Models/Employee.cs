@@ -22,6 +22,7 @@ namespace new_mvc.Models
 
         [Column(TypeName = ("nvarchar(200)"))]
         [Required(ErrorMessage = "Please enter Mail")]
+        [EmailAddress(ErrorMessage = "Invalid Mail '@' ")]//Check @ in Mail
         public string Mail { get; set; }
 
         [Column(TypeName = ("nvarchar(200)"))]
